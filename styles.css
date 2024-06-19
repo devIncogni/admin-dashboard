@@ -5,6 +5,7 @@
     --lavender: #a21caf;
     --light-pink: #f5d0fe;
     --dark-lavender: #701a75;
+    --grey: #636363;
 }
 
 /* #region Reset */
@@ -221,7 +222,7 @@ input[type="search"] {
     justify-self: center;
 }
 
-#userPFP {
+.userPFP {
     height: 2.5rem;
     width: 2.5rem;
     overflow: hidden;
@@ -246,7 +247,7 @@ input[type="search"] {
     gap: 1.5rem;
 }
 
-.userProfileInfo>#userPFP {
+.userProfileInfo>.userPFP {
     height: 4rem;
     width: 4rem;
 }
@@ -327,10 +328,6 @@ input[type="search"] {
 
 /* #region Projects Styling */
 
-.mainContent * {
-    /* border: 1px solid red; */
-}
-
 #contentTitle {
     font-size: 1.25rem;
     font-weight: 700;
@@ -341,7 +338,7 @@ input[type="search"] {
     grid-template-columns: auto;
     grid-template-rows: auto 1fr auto;
     gap: 1rem;
-    
+
     padding: 2rem;
     /* margin-bottom: 2rem; */
     background-color: var(--white);
@@ -350,9 +347,13 @@ input[type="search"] {
     border-radius: 1rem;
 }
 
-#projectCard>p:first-child{
+#projectCard>p:first-child {
     font-size: 1.25rem;
     font-weight: 700;
+}
+
+#projectCard>p:nth-child(2) {
+    color: var(--grey);
 }
 
 #projectCard>div {
@@ -373,5 +374,66 @@ input[type="search"] {
 #contentTitle {
     grid-column: 1/-1;
 }
+
+/* #endregion */
+
+/* #region Announcement and Trending Styling */
+
+#announcementCard,
+#trendingCard {
+    background-color: var(--white);
+    padding: 1rem 0;
+}
+
+#announcementHolder,
+#trendHolder {
+    background-color: var(--white);
+    padding: 1rem 2rem;
+
+    box-shadow: 0 0 5px -2px;
+    border-radius: 1rem;
+
+}
+
+#announcementCard>p:first-child,
+#trendingCard>p:nth-child(2) {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+#announcementCard>p:nth-child(2),
+#trendingCard>p:nth-child(3) {
+    font-size: 0.8rem;
+    /* font-weight: 400; */
+    color: var(--grey);
+}
+
+.announcements,
+.trending {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: max-content max-content;
+
+    gap: 2rem;
+}
+
+.hrLine {
+    height: 1px;
+    background-color: var(--grey);
+}
+
+#trendingCard {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0 1rem;
+    align-items: center;
+    line-height: 1.2;
+}
+
+#trendingCard>img {
+    grid-area: 1/1/3/2;
+}
+
+
 
 /* #endregion */
