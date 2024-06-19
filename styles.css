@@ -101,18 +101,27 @@ li {
     color: var(--white);
 }
 
-#logo>p {
-    font-size: 1.5rem;
+/* Link Styling */
+
+.sidebar a {
+    text-decoration: none;
+    color: var(--white);
 }
 
-#navBtns,
-#toolBtns {
-    font-size: 1rem;
+.sidebar a:hover,
+.sidebar a:visited:hover {
+    color: var(--dark-lavender);
 }
 
-#logo,
-#navBtns>ul>li,
-#toolBtns>ul>li {
+.sidebar a:focus {
+    color: var(--white);
+}
+
+/* Link Styling End */
+
+#logo>a,
+#navBtns>ul>li>a,
+#toolBtns>ul>li>a {
     display: grid;
     grid-auto-flow: column;
 
@@ -120,16 +129,27 @@ li {
     align-items: center;
     gap: 2rem;
 
+}
+
+#logo>a {
+    font-size: 1.5rem;
+
+    gap: 1rem;
+    padding: 0;
+}
+
+#navBtns a,
+#toolBtns a {
+    font-size: 1rem;
+}
+
+#navBtns>ul>li,
+#toolBtns>ul>li {
     padding-bottom: 1rem;
 }
 
 #navBtns>ul>li:last-child,
 #toolBtns>ul>li:last-child {
-    padding: 0;
-}
-
-#logo {
-    gap: 1rem;
     padding: 0;
 }
 
@@ -145,7 +165,7 @@ li {
     grid-template-rows: 1fr 1fr;
     gap: 0.8rem 2rem;
 
-    padding: 1rem 2rem;
+    padding: 0 2rem 1rem 2rem;
 
     box-shadow: 5px 0 5px -2px;
 }
