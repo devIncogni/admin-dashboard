@@ -291,3 +291,32 @@ input[type="search"] {
 /* Work Buttons End */
 
 /* #endregion */
+
+/* #region Main Content Styling */
+
+.mainContent *{
+    border: 1px solid red;
+}
+
+.mainContent {
+    display: grid;
+    grid-template-columns: 5fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+
+    padding: 2rem;
+}
+
+.projects {
+    grid-area: 1/1/3/2;
+}
+
+.announcements {
+    grid-area: 1/2/2/3;
+}
+
+.trending {
+    grid-area: 2/2/3/3;
+}
+
+/* #endregion */
