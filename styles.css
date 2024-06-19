@@ -82,10 +82,6 @@ li {
     grid-column: 2/3;
 }
 
-.container>div {
-    /* border: 1px solid red; */
-}
-
 /* #endregion */
 
 /* #region Sidebar Styling */
